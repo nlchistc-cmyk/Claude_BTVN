@@ -1,0 +1,13 @@
+﻿negative_keyword,match_type,negative_level,reason,confidence,source_search_term,campaign,ad_group,clicks,cost,conversions
+tuyển dụng,negative phrase,campaign,"Search term liên quan tuyển dụng/việc làm, không phải nhu cầu mua 'tour trung quốc'.",High,tuyển dụng hướng dẫn viên tour trung quốc,Tour_TrungQuoc_NonBrand,TQ_5N4D,12,280000.0,0.0
+du học,negative phrase,campaign,"Search term liên quan du học/học tập, không phải nhu cầu mua 'tour trung quốc'.",High,du học trung quốc học bổng 2026,Tour_TrungQuoc_NonBrand,TQ_5N4D,9,190000.0,0.0
+miễn phí,negative phrase,campaign,"Search term tìm nội dung miễn phí/tải về, không phải nhu cầu mua 'tour trung quốc'.",High,tour trung quốc miễn phí visa,Tour_TrungQuoc_NonBrand,TQ_BacKinh_ThuongHai,15,320000.0,0.0
+tự túc,negative phrase,campaign,"Search term thể hiện nhu cầu tự làm/tự túc, không cần dịch vụ trọn gói 'tour trung quốc'.",High,cách tự túc đi trung quốc không qua tour,Tour_TrungQuoc_NonBrand,TQ_5N4D,20,410000.0,0.0
+tin tức,negative phrase,campaign,"Search term mang tính tra cứu thông tin (tin tức/thời tiết/bản đồ), không phải nhu cầu mua 'tour trung quốc'.",High,tin tức trung quốc mới nhất,Tour_TrungQuoc_NonBrand,TQ_BacKinh_ThuongHai,7,140000.0,0.0
+thời tiết,negative phrase,campaign,"Search term mang tính tra cứu thông tin (tin tức/thời tiết/bản đồ), không phải nhu cầu mua 'tour trung quốc'.",High,thời tiết bắc kinh tháng 8,Tour_TrungQuoc_NonBrand,TQ_BacKinh_ThuongHai,11,180000.0,0.0
+phim,negative phrase,campaign,"Search term liên quan phim/nhạc/giải trí, không liên quan 'tour trung quốc'.",High,phim trung quốc hay 2026,Tour_TrungQuoc_NonBrand,TQ_5N4D,6,95000.0,0.0
+hàn quốc,negative exact,campaign,Search term đề cập quốc gia/sản phẩm khác ('hàn quốc') so với 'tour trung quốc' đang quảng cáo.,High,tour hàn quốc giá rẻ 5 ngày,Tour_TrungQuoc_NonBrand,TQ_5N4D,18,360000.0,0.0
+thái lan,negative exact,campaign,Search term đề cập quốc gia/sản phẩm khác ('thái lan') so với 'tour trung quốc' đang quảng cáo.,High,tour thái lan trọn gói,Tour_TrungQuoc_NonBrand,TQ_BacKinh_ThuongHai,14,275000.0,0.0
+bản đồ,negative phrase,campaign,"Search term mang tính tra cứu thông tin (tin tức/thời tiết/bản đồ), không phải nhu cầu mua 'tour trung quốc'.",High,bản đồ du lịch trung quốc,Tour_TrungQuoc_NonBrand,TQ_5N4D,5,80000.0,0.0
+download,negative phrase,campaign,"Search term tìm nội dung miễn phí/tải về, không phải nhu cầu mua 'tour trung quốc'.",High,download cẩm nang du lịch trung quốc pdf,Tour_TrungQuoc_NonBrand,TQ_5N4D,8,120000.0,0.0
+việc làm,negative phrase,campaign,"Search term liên quan tuyển dụng/việc làm, không phải nhu cầu mua 'tour trung quốc'.",High,việc làm công ty du lịch trung quốc,Tour_TrungQuoc_NonBrand,TQ_5N4D,4,70000.0,0.0
