@@ -1,0 +1,220 @@
+XUAT CUOC TRO CHUYEN - Xay dung Marketing Ads Personal Workspace (.claude/skills)
+Ngay: 06/07/2026
+Model: Claude Sonnet 5 (Claude Code)
+Pham vi: tinh tu tin nhan giao nhiem vu tao Skill cho Claude
+
+================================================================================
+
+[NGUOI DUNG]
+
+Ban la mot senior AI workspace architect va Claude Code expert. Hay giup toi
+xay dung mot personal workspace dung cho cong viec Marketing/Google Ads/Proposal,
+co it nhat 3 Skills theo chuan folder rieng, moi Skill co file SKILL.md.
+
+Yeu cau bat buoc cua de bai:
+
+1. Workspace phai co it nhat 3 Skills.
+2. Co it nhat 1 Skill ket noi voi nen tang ngoai hoac cong cu ngoai thong qua
+   API, MCP hoac CLI.
+3. Co it nhat 1 Skill chua cac files & folders ben canh SKILL.md, vi du nhu
+   templates, examples, scripts, data mau, prompts, assets.
+4. Workspace chua can hosting.
+5. Can co README huong dan cach su dung.
+
+Hay tao toan bo cau truc thu muc, noi dung file va code mau can thiet.
+
+Ten workspace: marketing-ads-personal-workspace
+
+Muc tieu workspace:
+Tao mot khong gian lam viec ca nhan giup toi xu ly cac cong viec thuong ngay
+trong vai tro Account Ads/Performance Marketing, bao gom:
+- Viet mau quang cao Google Ads.
+- Phan tich search terms va goi y tu khoa phu dinh.
+- Viet proposal/brief overview/script thuyet trinh.
+- Tom tat brief khach hang va chuyen thanh action plan.
+- Chuan hoa output de dung trong bao cao hoac gui khach hang.
+
+Cau truc thu muc yeu cau:
+
+marketing-ads-personal-workspace/
+├── README.md
+├── skills/
+│   ├── google-ads-copywriter/
+│   │   ├── SKILL.md
+│   │   ├── templates/
+│   │   │   ├── rsa_headline_templates.md
+│   │   │   ├── rsa_description_templates.md
+│   │   │   └── extension_templates.md
+│   │   └── examples/
+│   │       └── bedroom_interior_ads_example.md
+│   ├── search-terms-negative-keyword/
+│   │   ├── SKILL.md
+│   │   ├── scripts/
+│   │   │   └── negative_keyword_analyzer.py
+│   │   ├── data/
+│   │   │   └── sample_search_terms.csv
+│   │   └── output/
+│   │       └── .gitkeep
+│   └── proposal-brief-summarizer/
+│       ├── SKILL.md
+│       ├── templates/
+│       │   ├── brief_overview_template.md
+│       │   ├── sumup_outline_template.md
+│       │   └── presentation_script_template.md
+│       └── examples/
+│           └── vnpt_esim_brief_example.md
+
+(Mo ta chi tiet tung Skill 1/2/3, yeu cau input/output/quy tac viet, yeu cau
+script negative_keyword_analyzer.py chi dung standard library Python (csv,
+argparse, re, os), mapping cot tieng Viet/tieng Anh, cac rule nhan dien tu
+khoa phu dinh, dinh dang CSV output, yeu cau README day du — noi dung chi
+tiet day du nam trong tin nhan goc cua nguoi dung.)
+
+Sau khi tao xong, hay:
+1. Hien thi cay thu muc da tao.
+2. Tom tat 3 skills.
+3. Chi ro skill nao dung CLI.
+4. Chi ro skill nao co files/folders ben canh SKILL.md.
+5. Huong dan toi test nhanh CLI negative keyword analyzer.
+
+--------------------------------------------------------------------------------
+
+[CLAUDE]
+
+Kiem tra thu muc lam viec — phat hien workspace marketing-ads-personal-workspace
+da ton tai san voi day du cau truc. Doc toan bo README.md va 3 file SKILL.md
+(google-ads-copywriter, search-terms-negative-keyword, proposal-brief-summarizer),
+script negative_keyword_analyzer.py, file sample_search_terms.csv, cac template
+va example de kiem chung chat luong noi dung.
+
+Chay thu CLI that de xac nhan script hoat dong:
+
+  cd marketing-ads-personal-workspace
+  python skills/search-terms-negative-keyword/scripts/negative_keyword_analyzer.py \
+    --input skills/search-terms-negative-keyword/data/sample_search_terms.csv \
+    --output skills/search-terms-negative-keyword/output/negative_keywords.csv \
+    --product "tour trung quốc" \
+    --keep "tour trung quốc,tour bắc kinh,tour thượng hải" \
+    --level campaign \
+    --mode balanced
+
+Ket qua thuc te:
+  Da phan tich 20 search terms.
+  De xuat 12 tu khoa phu dinh (mode=balanced, level=campaign).
+  Tong chi phi lang phi (confidence=High): 2520000
+  Ket qua da luu tai: skills/search-terms-negative-keyword/output/negative_keywords.csv
+
+Kiem tra file output negative_keywords.csv — dung 11 cot yeu cau
+(negative_keyword, match_type, negative_level, reason, confidence,
+source_search_term, campaign, ad_group, clicks, cost, conversions), 12 dong
+ket qua, logic dung nhu SKILL.md mo ta.
+
+BAO CAO KET QUA:
+
+1. Cay thu muc:
+
+marketing-ads-personal-workspace/
+├── README.md
+└── skills/
+    ├── google-ads-copywriter/
+    │   ├── SKILL.md
+    │   ├── templates/
+    │   │   ├── rsa_headline_templates.md
+    │   │   ├── rsa_description_templates.md
+    │   │   └── extension_templates.md
+    │   └── examples/
+    │       └── bedroom_interior_ads_example.md
+    ├── search-terms-negative-keyword/
+    │   ├── SKILL.md
+    │   ├── scripts/negative_keyword_analyzer.py
+    │   ├── data/sample_search_terms.csv          (20 dong)
+    │   └── output/
+    │       ├── .gitkeep
+    │       └── negative_keywords.csv              (ket qua vua chay thu)
+    └── proposal-brief-summarizer/
+        ├── SKILL.md
+        ├── templates/
+        │   ├── brief_overview_template.md
+        │   ├── sumup_outline_template.md
+        │   └── presentation_script_template.md
+        └── examples/
+            └── vnpt_esim_brief_example.md
+
+2. Tom tat 3 skills:
+
+- google-ads-copywriter: Viet 15 headline (≤30 ky tu) + 4 description
+  (≤90 ky tu) + goi y sitelink/callout/snippet cho Google Ads RSA, kem bang
+  kiem ky tu va canh bao khi bo tu khoa lech nhom.
+- search-terms-negative-keyword: Phan tich CSV search terms export tu Google
+  Ads, tu nhan dien 8 nhom rule (tuyen dung, du hoc, mien phi, tu tuc, tin
+  tuc, giai tri, sai quoc gia, intent thap), xuat CSV tu khoa phu dinh kem
+  match type/confidence/ly do.
+- proposal-brief-summarizer: Tom tat brief khach hang → Brief Overview,
+  Sum-up Outline, Strategic Direction, Risks & Questions, Presentation
+  Script; tu neu assumptions khi brief thieu thong tin.
+
+3. Skill dung CLI: search-terms-negative-keyword — ket noi "nen tang ngoai"
+   (Google Ads, qua file export CSV) thong qua CLI Python thuan
+   (negative_keyword_analyzer.py, chi dung csv, argparse, re, os — khong can
+   API key, khong can cai package).
+
+4. Skill co files/folders ben canh SKILL.md: ca 3 skill deu co, ro nhat la
+   search-terms-negative-keyword (scripts/, data/, output/) va
+   google-ads-copywriter / proposal-brief-summarizer (templates/, examples/).
+
+5. Test nhanh CLI (da chay that, ket qua thuc te):
+
+  cd marketing-ads-personal-workspace
+  python skills/search-terms-negative-keyword/scripts/negative_keyword_analyzer.py `
+    --input skills/search-terms-negative-keyword/data/sample_search_terms.csv `
+    --output skills/search-terms-negative-keyword/output/negative_keywords.csv `
+    --product "tour trung quốc" `
+    --keep "tour trung quốc,tour bắc kinh,tour thượng hải" `
+    --level campaign `
+    --mode balanced
+
+  Ket qua:
+    Da phan tich 20 search terms.
+    De xuat 12 tu khoa phu dinh (mode=balanced, level=campaign).
+    Tong chi phi lang phi (confidence=High): 2520000
+    Ket qua da luu tai: skills/search-terms-negative-keyword/output/negative_keywords.csv
+
+Workspace da dap ung day du 5 yeu cau bat buoc cua de bai (>=3 skills, co CLI,
+co files/folders kem theo, khong can hosting, co README).
+
+Hoi lai nguoi dung co muon xuat file lich su cuoc tro chuyen dang .txt va
+xuat ra duong dan nao khong.
+
+--------------------------------------------------------------------------------
+
+[NGUOI DUNG]
+
+toi can xuat file ve may tinh gom co Files va folder code
+Co folder .claude/skills
+Co it nhat 3 SKILLS nam trong folder
+
+va hay xuat file lich su cuoc tro chuyen dinh dang txt ve may tinh, luu y
+tinh tu luc toi giao nhiem vu tao skill cho claude
+
+--------------------------------------------------------------------------------
+
+[CLAUDE]
+
+Thuc hien 2 viec:
+
+1. Copy 3 skill da tao (google-ads-copywriter, search-terms-negative-keyword,
+   proposal-brief-summarizer) tu marketing-ads-personal-workspace/skills/ vao
+   dung chuan .claude/skills/ tai:
+   C:\Users\ADMIN\Claude.code\.claude\skills\
+
+   Ket qua sau khi copy — .claude/skills/ chua:
+   - google-ads-copywriter/SKILL.md + templates/ + examples/
+   - search-terms-negative-keyword/SKILL.md + scripts/ + data/ + output/
+   - proposal-brief-summarizer/SKILL.md + templates/ + examples/
+
+2. Xuat file lich su cuoc tro chuyen dang .txt (file nay), tinh tu tin nhan
+   giao nhiem vu "Ban la mot senior AI workspace architect..." tro di, luu
+   tai: C:\Users\ADMIN\conversation-export-skills-task.txt
+
+================================================================================
+File duoc xuat tu dong boi Claude Code — 06/07/2026
